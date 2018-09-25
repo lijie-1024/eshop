@@ -1,0 +1,127 @@
+/* 公共的css */
+/* 头部 */
+body,.mui-content{
+    background: #fff;
+}
+/* 初始化样式 一般 有一个专门 base common */
+ul{
+  padding:  0;
+  margin: 0;
+  list-style: none;  
+}
+.my-header{
+    background: #006699;
+}
+.my-header h1{
+    color:#fff;
+}
+.my-header .mui-icon{
+    color:#fff;
+}
+/* 底部 */
+.my-footer{
+    background: #006699;
+}
+/* import>style>id>class>标签>继承 */
+.my-footer .mui-tab-item{
+    color:#fff;
+}
+/* 注意权重 是否 可以覆盖 */
+/* .mui-tab-item.mui-active 交集选择器 两个类名都有 */
+.my-footer .mui-tab-item.mui-active{
+    color: darkorange;
+} 
+/* 导航链接 */
+/* 背景色 */
+body,.mui-content{
+    background: #fff;
+}
+.nav-links{
+    padding: 10px;
+}
+.nav-links a{
+    float: left;
+    width: 33.333%;
+}
+.nav-links a img{
+    width: 100%;
+    /* vertical-align: top; */
+    /* display: block; */
+}
+/* 品牌专区 */
+.brand{
+    padding: 0 10px;
+}
+.brand .title{
+    width: 100%;
+}
+.brand ul{
+  padding: 10px 0;
+  margin: 0;
+  list-style: none;  
+}
+.brand ul li{
+    float: left;
+    width: 25%;
+}
+.brand ul li a{
+    /* 块级元素的宽度就是父级的宽度 */
+    display: block;
+}
+.brand ul li a img{
+    /* 以父元素来对应 */
+    width: 100%;
+}
+/* 生活专区 */
+.product{
+    padding: 0 10px;
+}
+.product .title{
+    width: 100%;
+}
+.product ul{
+    padding: 5px 0;
+}
+.product ul li{
+    width: 50%;
+    float: left;
+    padding: 5px;
+}
+.product ul li a{
+    display: block;
+    padding: 5px;
+    /* box-shadow: x坐标 y坐标 模糊多少像素 颜色; */
+    box-shadow: 0px 0px 5px red;
+}
+.product ul li img{
+    width: 100%;
+}
+.product ul li .name{
+    display: block;
+    height: 38px;    overflow: hidden;
+    color: #8f8f94;     text-align: center;
+    font-size: 14px;
+    line-height: 18px;    /* 一行文字的高度 */
+    text-indent: 1em;    /* 首行缩进 1个字 */
+    padding: 5px;
+}
+.product ul li p{
+    margin-top: 5px;     text-align: center;
+}
+.product ul li p span:first-child{/* 第一个孩子span */
+    color: #f20;
+    padding-right: 8px;
+}
+.product ul li p span:nth-child(2){/* 第二个孩子span */
+    text-decoration: line-through;
+}
+.buy-now{
+    display: block;
+    height: 30px;    width: 80px;
+    line-height: 30px;
+    text-align: center;     font-size: 14px;
+    color: #fff;     background: #006699;
+    border-radius: 4px;     margin: 0px auto 5px auto;
+    /* auto 块级元素才有 */
+
+}

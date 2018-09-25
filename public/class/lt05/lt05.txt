@@ -1,0 +1,88 @@
+不管后缀名  你都要把代码 往你学过的东西 去联想 
+
+
+mui.toast()
+
+mui.alert()
+
+mui.confirm()
+
+ location.reload();//重新刷新页面
+ location.href=xxx;//跳转页面
+
+this.parentNode.parentNode  原生获取 父节点的父节点
+
+mui.swipeoutClose(原生的要滑回去的标签)
+
+编辑修改 一般有两个大步骤
+
+1.跳转到页面 获取对应要编辑 原始数据
+
+2 修改之后  获取修改后的数据 发送ajax到后台修改
+
+
+
+如果提供了 一个 通过id 获取地址的 接口 n我们直接传递id  就可以拿到数据
+
+JSON.stringify(数组或者对象)  把数组或者对象转化成字符串
+JSON.parse(字符串) 把字符串转化成 数组或者对象
+
+
+现在 编辑 和添加 都是用的同一个页面  需要区分你是要 干嘛
+
+你现在是点击 编辑过来的 还是点击添加过来的
+
+
+一些参数写什么都行 但是 建议写 英文或者数字来替代
+
+false 
+
+
+
+
+
+1. 1.1在address.html 添加收货地址 写一个href 
+ <a href="addAddress.html?isEdit=0" class="addAddress">添加收货地址</a>
+   1.2 点击编辑  js要跳转 
+   location.href="addAddress.html?isEdit=1";   //  跳转到编辑页面 
+2 跳转到 addAddress.html addAddress.js
+ 这个js  获取 isEdit 如果是0 添加 1代表编辑
+ 2.1.编辑和添加 使用模板引擎显示页面
+ 2.2 点击发送ajax 的时候 因为编辑和添加都要发送ajax 需要改url  和data 参数
+
+
+search-result.html 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+数字0 "" null undefined NaN
+
+"0" 字符串的0 不是数字0  也不是空字符串 所以是true
+"null" 
+
+
+绑定事件元素  一定要确定 已经在页面上生成了 才生效
+
+后来生成的 要使用事件委托
+
+
+
+
+

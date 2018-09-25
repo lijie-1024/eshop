@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 给定一个仅包含数字 2-9 的字符串，返回所有它能表示的字母组合。给出数字到字母的映射如下（与电话按键相同）。注意 1 不对应任何字母。
+        // 输入："23"
+        // 输出：["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
+        // 输入:"234"
+        // 输出:["adg","adh","adi","aeg","aeh","aei","afg","afh","afi","bdg","bdh","bdi","beg","beh","bei","bfg","bfh","bfi","cdg","cdh","cdi","ceg","ceh","cei","cfg","cfh","cfi"]
+        function phone(num) {
+            var baseStr = 'abcdefghijklmnopqrstuvwxyz';
+            var baseArr = baseStr.split('');
+            var baseObj = {};
+            var newArr = [];
+            var numArr = num.split('');
+            var final = [];
+            // console.log(numArr);
+            for (var i = 2; i < 10; i++) {
+                if (i == 7 || i == 9) {
+                    newArr[i] = baseArr.splice(0, 4);
+                } else {
+                    newArr[i] = baseArr.splice(0, 3);
+                }
+                baseObj[i] = newArr[i];
+            }
+            if (numArr.length == 0) {
+                return [];
+            }
+            if (numArr.length > 1) {
+                console.log(baseObj);
+                for (var i = 0; i < numArr.length - 1; i++) {
+                    for (var j = i + 1; j < numArr.length; j++) {
+                        baseObj[numArr[i]].forEach(function (val) {
+                            baseObj[numArr[j]].forEach(function (value) {
+                                final.push(val + value);
+                            })
+                        })
+                    }
+                }
+            } else {
+                return baseObj[num];
+            }
+            return final;
+        }
+
+        // 
+        var chars = {
+            '2': 'abc',
+            '3': 'def',
+            '4': 'ghi',
+            '5': 'jkl',
+            '6': 'mno',
+            '7': 'pqrs',
+            '8': 'tuv',
+            '9': 'wxyz'
+        }
+        var num = '345';
+        var arr = [];
+        var a = 0;
+        // for (var i in num) { //num[i] 3 4 5
+        //     // console.log(chars[num[i]])// def ghi jkl
+
+        //     while (true) {
+        //         chars[num[i]]
+        //         // for(var k=0;k<chars[num[i]].length;k++){
+        //         //     console.log(chars[num[i]][k])
+        //         // }
+        //     }
+        // }
+                
+        var res=[]; 
+    //   递归实现
+        function getStr(num, idx, s, res, numToStr) {
+            // console.log(numToStr)
+            if (idx == num.length) {
+                return res.push(s);
+            } else {
+                // def ghi jkl
+                for (var i = 0; i < numToStr[num[idx]].length; i++){
+                    var str=s + numToStr[num[idx]][i];
+                    var index= idx + 1;
+                    getStr(num,index, str, res, numToStr);
+                }
+            }
+
+        }
+        getStr('3456',0,'', res,   chars )  
+        console.log(res);
+
+        
+    </script>
+</body>
+
+</html>

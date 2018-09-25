@@ -1,0 +1,90 @@
+.title {
+  font-size: 18px;
+  padding: 10px;
+}
+.price {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-right: none;
+  font-size: 14px;
+}
+.price .new {
+  color: red;
+  font-size: 24px;
+}
+.price .old {
+  color: #ccc;
+  padding-left: 10px;
+  text-decoration: line-through;
+}
+.size {
+    padding: 10px;
+}
+.size span{
+    display: inline-block;
+    font-size: 14px;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+.num {
+  padding: 10px;
+  line-height: 28px;
+
+}
+.num .seleNum{
+  text-align: center;
+  padding: 0 10px;
+}
+.num .seleNum input{
+  float: left;
+  text-align: center;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+  width: 28px;
+  height: 28px;
+  margin: 0;
+  padding: 0;
+  color: rgb(36, 35, 35);
+}
+.num .seleNum span{
+  float: left;
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #ccc;
+}
+
+.btns{
+  display: flex;
+  width: 100%;
+  height: 30px;
+  margin-bottom: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  margin-top: 10px;
+  font-size: 14px;
+}
+.btns a{
+  flex: 1;
+  color: #fff;
+  margin-left: 10px;
+  background: #fa672d;
+}
+.btns span{
+  flex: 1;
+  margin-right: 10px;
+
+  background: red;
+}
+.size span.active{
+  background:yellowgreen;
+  color: black;
+}

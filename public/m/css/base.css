@@ -1,0 +1,120 @@
+/* 公共的css */
+* {
+  margin: 0;
+  padding: 0;
+  touch-action: none;
+}
+body,
+.mui-content {
+  background-color: #fff;
+}
+ul,
+li {
+  list-style: none;
+}
+/* 头部 */
+.my-header {
+  background-color: #006699;
+}
+.my-header h1,
+.my-header a {
+  color: #fff;
+}
+/* 底部 */
+.my-footer {
+  background-color: #006699;
+}
+.my-footer span {
+  color: #fff;
+}
+.my-footer .mui-active span {
+  color: darkorange;
+}
+/* 导航 */
+.nav-links {
+  padding: 10px;
+}
+.nav-links a {
+  float: left;
+  width: 33.33%;
+}
+.nav-links a img {
+  display: block;
+  width: 100%;
+  /* vertical-align: top; */
+  /* 给父元素设置font-size: 0; */
+}
+/* 品牌专区 */
+.brand {
+  padding: 0 10px;
+}
+.brand .title {
+  width: 100%;
+}
+.brand ul {
+  padding: 10px 0;
+}
+.brand ul li {
+  float: left;
+  width: 25%;
+}
+.brand ul li a {
+  display: block;
+}
+.brand ul li a img {
+  width: 100%;
+}
+/* 运动生活专区 */
+.product {
+  padding: 0 10px;
+}
+.product .title {
+  width: 100%;
+}
+.product ul li {
+  float: left;
+  width: 50%;
+  margin: 5px 0;
+  padding: 0 5px;
+}
+.product ul li a {
+  display: block;
+  padding: 5px;
+  /* box-shadow: x坐标 y坐标 模糊多少像素 颜色; */
+  box-shadow: 0 0 5px #ccc;
+}
+.product ul li a img {
+  width: 100%;
+}
+.product ul li a .name {
+  overflow: hidden;
+  display: block;
+  height: 38px;
+  line-height: 18px;
+  padding: 5px;
+  color: #8f8f94;
+  text-align: center;
+  font-size: 14px;
+}
+.product ul li a p {
+  margin-top: 10px;
+  text-align: center;
+}
+.product ul li a p span:first-child {
+  color: #f20;
+}
+.product ul li a p span:nth-child(2) {
+  text-decoration: line-through;
+}
+.buy-now {
+  display: block;
+  margin: 0 auto 5px;
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  background-color: #006699;
+  border-radius: 4px;
+}

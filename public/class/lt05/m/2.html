@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+      var obj={
+            fn:function(){
+                
+                function aaa(){
+                    // console.log(this)
+                    function bbb(){
+                        console.log(this)
+                     }
+                      bbb();
+                }
+
+                aaa();
+
+            }
+        }
+        obj.fn();
+        // 如果是xx.函数() 这样的调用 那么 this 就是xx
+        // 如果 是 函数()  this就是window 不管你函数写在哪里
+
+        // function abc(){
+        //     console.log(this)
+        // }
+
+        // abc();
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+1. 电脑安装了数据库时不需要打开phpstudy
+2. 找到letao文件夹, shift+右键打开power shell命令行窗口
+3. 输入npm start, 回车, 开启node.js的服务器
+4. 浏览器访问localhost:3000直接打开public文件夹, localhost:3000/m/xx.html打开m文件夹下的文件
+
+工作的两种代码方式
+1. 前后端分离 乐淘
+2. 混合开发 阿里百秀
+
+修改样式:
+1. 加类名
+2. 加id
+3. 行内样式
+
+图标:
+1. 字体图标
+  mui自带/iconfont阿里图标/font-awesome
+    选择想要的图标, 下载对应css文件
+    @font-face引入css, 使用图标对应的类名iconfont iconfont-xx/fa fa-xx
+    注意权重: import>style>id>class>标签>继承/*
+2. 精灵图
+
+轮播图
+mui框架封装了mui方法, 类似于jq的$
+img标签底部默认有3px左右的空白
+  vertical-align: top;
+  display: block;
+  给父元素添加font-size: 0;不常用
+子元素浮动, 给父元素添加mui-clearfix类名
+
+移动端事件:
+click 点击, 300ms延迟, 移动端一般不用
+tap 点击
+touch
+  ontouchstart 手指触摸到屏幕
+  ontouchmove 手指在屏幕上滑动
+  ontouchend 手指离开屏幕
+这几个事件都可以拿到对应的xy坐标, 存储在事件对象e里面
+
+模拟点击
+ontouchstart 记录当前时间 t1
+ontouchend   记录离开时间 t2
+t2-t1 规定小于100ms就是点击, 大于100ms就是长按
+滑动
+ontouchstart 记录坐标x1, y1, 滑动时记录坐标x2, y2
+  x2-x1 < 0, 左滑
+  x2-x1 > 0, 右滑
+  y2-y1 < 0, 上滑
+  y2-y1 > 0, 下滑
+滚动
+记录坐标算出y方向的距离, 使用translatey方向动态设置运动距离
+http://www.css88.com/doc/zeptojs_api/#Touch%20events
+zepto封装移动端事件: swipeLeft 左滑, swipeRight, swipeUp, swipeDown
+
+父元素
+  display:flex;
+  flex-wrap: wrap; wrap换行, 默认不换行
+  flex-direction: column; 切换主轴方向, column Y, row X
+  justify-content: center; 主轴居中, 默认x
+  align-items: center; 副轴居中
+
+栅格系统
+row代表一行, 一般有12列
+  col-xs-6
+  col-sm-数字
+  col-md
+  col-lg
+  mui-col-xs-6
+
+本地存储(存在浏览器)
+存: localStorage.setItem('名字', 字符串的值) 只能是字符串
+取: localStorage.getItem('名字')
+删: localStorage.removeItem('名字')
+历史记录临时保存, 不重要, 不需要存数据库
+
+转换字符串和数组
+JSON.parse(字符串) 转换成数组
+JSON.stringify(数组) 转换成字符串
+
+临时的数据 不太重要的
+1.session  服务器
+2 cookie   浏览器 （存的数据少）
+3 localstorage 存在浏览器 H5  你不删掉的话 会一直存在
+（前端 现在喜欢用这个） 存一些数据 后面会用 但是不重要的
+
+'abcdef'.substr(2) 从2索引开始 截取到最后
+
+数组的方法
+
+//unshift 在前面追加 push 在后面追加 pop 删除后面 shift 删除前面 
+
+
+select * from product where proName like '%莹恋%'
+
+proName 包含 莹恋 这两个字的 所有数据
+
+
+this 如果有两个函数以上 嵌套了 那么你就想一想 this还是你想要的吗？
+
+获取盒子的高度
+clientHeight
+scrollHeight
+offsetHeight
+
+框架的
+ mui.init({
+        pullRefresh : {
+          container:"#refreshContainer",//待刷新区域标识，querySelector能定位的css选择器均可，比如：id、.class等
+          up : {
+            height:50,//可选.默认50.触发上拉加载拖动距离
+            auto:true,//true自动上拉加载一次 false不会
+            contentrefresh : "正在加载...",//可选，正在加载状态时，上拉加载控件上显示的标题内容
+            contentnomore:'客观没有啦！！！',//可选，请求完毕若没有更多数据时显示的提醒内容；
+            callback :getData //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+          }
+        }
+    });
+
+上拉加载原理
+
+上滑的距离>子盒子的高度-父盒子的高度
+
+
+
+
+
+
+a  写 href 就会跳转到对应的页面
+现在不会 是因为mui 框架 自己禁用他跳转
+
+现在想 自己写js来实现跳转
+
+
+ // location.href  这个可以 但是现在mui里面也有对应的跳转方法 我们可以用他
+        mui.openWindow({
+            url:$(this).attr("href")  //跳转的地址
+        })
+
+只要 给对应的a加上 href 对应你想去的地址  那么我们的js就能跳转过去
+
+让一个子元素 无条件居中
+position absolute
+
+top 50%
+left 50%
+  x y
+transform:translate(-50%,-50%)
+
+短信验证
+百度 搜索 手机短信验证码 真的发到手机  需要花钱买
+ 
+ mui.alert("请输入用户名"); 
+
+ mui.toast("请输入用户名");
+ mui.confirm("请输入用户名");
+
+
+
+
+
+
+看文档 写一个选择日期 效果
+
+mui Hbuilder   html5+plus（可以操作手机了） 都一个公司
+
+
+<li class="mui-table-view-cell mui-media">
+                <div class="mui-slider-right mui-disabled">
+                    <span class="mui-btn mui-btn-blue">编辑</span>
+                    <a class="mui-btn mui-btn-red">删除</a>
+                </div>
+                <div class="mui-media-body mui-slider-handle">
+                    邮编：<%=result[i].postCode%> 收货人：<%=result[i].recipients%>
+                    <p class='mui-ellipsis'>
+                        <%=result[i].address%>
+                        <%=result[i].addressDetail%>
+                    </p>
+                </div>
+            </li>
+
+移动端页面  打开浏览器 输入网址就行
+浏览器打开的移动端页面
+录视频 语音 
+移动端页面 其实是没有权限的 去操作手机的
+
+
+app应用 下载安装（比移动端权限高 可以操作手机任何功能）
+直接是app的 qq 微信这类
+
+
+
+
+app混合开发
+前端写页面  把页面之间给 ios或者安卓开发的人 他嵌套起来
+
+
+ios  只用ios来写
+Android 来写
+
+
+MD5    密码都喜欢使用这种加密
+
+https://www.cnblogs.com/fozero/p/6211844.html
+
+同步 页面执行到代码 会一直等着 直到执行完 才会继续往下走
+
+异步 页面执行到代码 不会等着 你去执行你的  我先走了  
+
+如果一两个样式 你甚至可以写行内样式
+
+样式多了 才尽量去写一个类名
+
+<!-- readonly  只读的-->
+
+
+'           '.trim() 原生有 去除前后空白 新版浏览器支持  ie678不支持
+
+$.trim() 去除前后空白 jq zepto封装的  兼容浏览器
+
+
+// 1在mui.js与mui.css  后面引入对应的js css
+// 2 去mobile的js里面复制那个 city.js 省市区数据引入
+$(function(){
+    // 3 初始化弹出选择器  {layer:3} 有三行 
+    var picker = new mui.PopPicker({layer:3});
+    // 4 显示省市区
+    picker.setData(cityData);
+    // 5 点击省市区文本框 显示
+    $("#selectCity").on("tap",function(){
+        // 显示
+        picker.show(function (items) {//items 形式参数 可以随便改名字
+            console.log(items)//数组 有选中的三个省市区
+            // 把省市区填写到文本框里
+            $("#selectCity").val(items[0].text+items[1].text+items[2].text)
+        })
+    })
+
+})

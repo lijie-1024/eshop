@@ -1,0 +1,13 @@
+.filter{
+    margin: 10px;
+    background: #efeff4;
+    font-size: 14px;
+}
+.filter .mui-col-xs-6{
+    text-align: center;
+    height: 35px;
+    line-height: 35px;
+}
+.filter .mui-icon{
+    font-size: 14px;
+}

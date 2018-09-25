@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        a{
+            display: block;
+            font-size: 0;
+        }
+    </style>
+</head>
+<body>
+        <a href="javacript:;"><img src="images/nav1.png" alt=""></a>
+        <script>
+            document.querySelector("a").ontouchstart=function(e){
+                console.log('开始摸')
+                console.log(e);
+            }
+
+            document.querySelector("a").ontouchmove=function(e){
+                console.log('一直摸')
+                console.log(e);
+            }
+
+            document.querySelector("a").ontouchend=function(e){
+                console.log('不摸了')
+                console.log(e);
+            }
+
+            
+        
+        
+        </script>
+</body>
+</html>

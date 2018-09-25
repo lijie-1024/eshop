@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0,minimum-scale=1.0">
+  <title>乐淘</title>
+  <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+  <link rel="stylesheet" href="assets/fontAwesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/form.css">
+  <script src="assets/mui/js/mui.min.js"></script>
+  <script src="assets/zepto/zepto.min.js"></script>
+  <script src="js/public.js"></script>
+  <script src="js/modify.js"></script>
+</head>
+<body>
+  <!-- 头部 -->
+  <header class="mui-bar mui-bar-nav my-header">
+    <a class="mui-icon mui-icon-arrowleft mui-pull-left" href="user.html"></a>
+		<h1 class="mui-title">修改密码</h1>
+  </header>
+  <!-- 底部 -->
+  <nav class="mui-bar mui-bar-tab my-footer">
+		<a class="mui-tab-item" href="index.html">
+			<span class="mui-icon mui-icon-home"></span>
+			<span class="mui-tab-label">首页</span>
+		</a>
+		<a class="mui-tab-item" href="category.html">
+			<span class="mui-icon mui-icon-bars"></span>
+			<span class="mui-tab-label">分类</span>
+		</a>
+		<a class="mui-tab-item" href="cart.html">
+			<span class="mui-icon fa fa-shopping-cart"></span>
+			<span class="mui-tab-label">购物车</span>
+		</a>
+		<a class="mui-tab-item" href="user.html">
+			<span class="mui-icon mui-icon-person"></span>
+			<span class="mui-tab-label">会员中心</span>
+		</a>
+  </nav>
+  <!-- 内容 -->
+	<div class="mui-content">
+    <!-- 注册表单 -->
+    <form class="mui-input-group">
+      <div class="mui-input-row">
+        <label>原密码</label>
+        <input name="originPass" type="password" class="mui-input-password" placeholder="请输入原密码" />
+      </div>
+      <div class="mui-input-row">
+        <label>新密码</label>
+        <input name="newPass" type="password" class="mui-input-password" placeholder="请输入新密码" />
+      </div>
+      <div class="mui-input-row">
+        <label>确认密码</label>
+        <input name="confirmNewPass" type="password" class="mui-input-password" placeholder="请再次输入新密码" />
+      </div>
+      <div class="mui-input-row">
+        <label>验证码</label>
+        <input name="vCode" type="text" class="mui-input-clear" placeholder="请输入验证码" />
+        <a href="javascript:;" id="getCode">获取验证码</a>
+      </div>
+      <div class="mui-button-row">
+        <button type="button" class="mui-btn mui-btn-primary" id="modify-btn">确认修改</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
